@@ -7,10 +7,7 @@ import NewComment from "../new_comment";
 
 async function getComments(section: string) {
   const data = await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/api?section=${section}`,
-    {
-      cache: "no-store",
-    }
+    `${process.env.NEXT_PUBLIC_URL}/api?section=${section}`
   );
   return data.json();
 }
