@@ -5,8 +5,6 @@ import { useSearchParams } from "next/navigation";
 
 import NewComment from "../new_comment";
 
-export const revalidate = 0;
-
 async function getComments(section: string) {
   const data = await fetch(
     `${process.env.NEXT_PUBLIC_URL}/api?section=${section}`,
